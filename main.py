@@ -3,7 +3,7 @@ import result_writer
 import ip_tracker
 import json
 from fastapi import FastAPI, File, UploadFile, Form
-from fastapi_cors import CORSMiddleware
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import spacy
 import pytesseract

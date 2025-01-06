@@ -13,6 +13,13 @@ import os
 
 # Initialize FastAPI app
 main = FastAPI()
+main.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
 
 # Load the Spacy model
 nlp = spacy.load("en_core_web_sm")
